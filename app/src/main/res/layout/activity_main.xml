@@ -114,10 +114,7 @@
                         android:layout_width="match_parent"
                         android:scaleType="centerCrop"
                         android:layout_height="200dp" />
-                    <View
-                        android:background="@drawable/gradient_image"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+
                 </FrameLayout>
 
                 <RelativeLayout
