@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="day01.quang.projectmon.TripBankActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            app:titleTextColor="@color/toolBar_text"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:paddingLeft="10dp"
+                android:background="#00ff0000"
+                android:src="@drawable/ic_function_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/toolBar_text"
+                android:text="Trip Bank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/layout_yourTrip"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:weightSum="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:background="@drawable/horizontal_pipe"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="5dp"/>
+        <TextView
+            android:textColor="#ffff"
+            android:textStyle="bold"
+            android:background="@drawable/horizontal_pipe"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="Your Trip"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@drawable/horizontal_pipe"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="5dp"/>
+    </LinearLayout>
+    <android.support.v7.widget.CardView
+        android:id="@+id/layout_CardView"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        card_view:cardCornerRadius="20dp"
+        card_view:cardPreventCornerOverlap="false"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/beach"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                android:layout_height="200dp" />
+
+            <View
+                android:background="@drawable/gradiant_image_white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_alignParentTop="true"
+                android:textColor="#ffff"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="Trip To Nha Trang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:weightSum="3"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:src="@drawable/ic_trip_bank_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp" />
+
+                <ImageButton
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:src="@drawable/ic_share"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp" />
+
+                <ImageButton
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:src="@drawable/ic_go"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"></android.support.v7.widget.CardView>
+
+</LinearLayout>

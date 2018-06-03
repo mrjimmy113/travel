@@ -1,5 +1,6 @@
 package day01.quang.projectmon;
 
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -63,5 +64,12 @@ public class MainActivity extends AppCompatActivity {
         no_data.setVisibility(View.GONE);
         yourTrip.setVisibility(View.VISIBLE);
         card.setVisibility(View.VISIBLE);
+        Intent intent = new Intent(this, PlanActivity.class);
+        startActivity(intent);
+    }
+
+    public void moveToTripBank(View view) {
+        Intent intent = new Intent(this, TripBankActivity.class);
+        startActivity(intent);
     }
 }
