@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:statusBarColor">#000000</item>
         <item name="android:navigationBarColor">#000000</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="android:textColorPrimary">@android:color/black</item>
+    </style>
+
+    <style name="review_trip_text">
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginVertical" tools:targetApi="o">5dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="ic_edit_text">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
     </style>
 </resources>

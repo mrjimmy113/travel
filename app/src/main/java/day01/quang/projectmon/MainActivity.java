@@ -67,4 +67,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PlanActivity.class);
         startActivity(intent);
     }
+
+    public void moveToTripBank(View view) {
+        Intent intent = new Intent(this, TripBankActivity.class);
+        startActivity(intent);
+    }
 }
