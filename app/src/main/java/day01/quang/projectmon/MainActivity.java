@@ -72,4 +72,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, TripBankActivity.class);
         startActivity(intent);
     }
+
+    public void moveToMap(View view) {
+        Intent intent = new Intent(this, MapActivity.class);
+        startActivity(intent);
+    }
 }

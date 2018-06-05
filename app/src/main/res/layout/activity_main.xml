@@ -138,7 +138,9 @@
                             android:background="@color/colorPrimary"
                             android:src="@drawable/ic_direction"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent" />
+                            android:layout_height="match_parent"
+                            android:onClick="moveToMap"
+                            />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_marginHorizontal="10dp"
@@ -215,7 +217,9 @@
                                     android:background="@color/colorPrimary"
                                     android:src="@drawable/ic_direction"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="match_parent" />
+                                    android:layout_height="match_parent"
+                                    android:onClick="moveToMap"
+                                    />
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_marginHorizontal="10dp"
