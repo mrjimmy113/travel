@@ -21,7 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".PlanActivity" />
-        <activity android:name=".TripBankActivity"></activity>
+        <activity android:name=".TripBankActivity" />
+        <activity android:name=".UserInfoActivity"></activity>
     </application>
 
 </manifest>
