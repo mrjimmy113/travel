@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PackNGo.iml" filepath="$PROJECT_DIR$/PackNGo.iml" />
+      <module fileurl="file://D:\Quang\HCI\travel\PackNGo.iml" filepath="D:\Quang\HCI\travel\PackNGo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/travel.iml" filepath="$PROJECT_DIR$/travel.iml" />
     </modules>
   </component>
 </project>
