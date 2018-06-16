@@ -160,4 +160,9 @@ public class MainActivity extends AppCompatActivity {
         });
         optionsMenu.show();
     }
+
+    public void placeAround(View view) {
+        Intent intent = new Intent(this, PlaceAroundActivity.class);
+        startActivity(intent);
+    }
 }
