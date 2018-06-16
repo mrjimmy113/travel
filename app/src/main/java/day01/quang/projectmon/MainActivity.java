@@ -1,5 +1,6 @@
 package day01.quang.projectmon;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -7,20 +8,29 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.view.menu.MenuBuilder;
+import android.support.v7.view.menu.MenuPopupHelper;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.PopupMenu;
 
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
-
+    private ImageButton btnDayAction, btnActivityAction;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btnDayAction = findViewById(R.id.btnDayMenuAction);
+        btnActivityAction = findViewById(R.id.btnActivityMenuAction);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -49,6 +59,19 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     }
                 });
+
+        btnActivityAction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showActivityMenu();
+            }
+        });
+        btnDayAction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDayMenu();
+            }
+        });
     }
 
     @Override
@@ -78,8 +101,63 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void moveToMap(View view) {
+    public void moveToMap() {
         Intent intent = new Intent(this, MapActivity.class);
         startActivity(intent);
+    }
+
+    @SuppressLint("RestrictedApi")
+    public void showDayMenu() {
+
+        @SuppressLint("RestrictedApi") MenuBuilder menuBuilder =new MenuBuilder(this);
+        MenuInflater inflater = new MenuInflater(this);
+        inflater.inflate(R.menu.trip_day_action, menuBuilder);
+        @SuppressLint("RestrictedApi") MenuPopupHelper optionsMenu = new MenuPopupHelper(this, menuBuilder, btnDayAction);
+        optionsMenu.setForceShowIcon(true);
+        menuBuilder.setCallback(new MenuBuilder.Callback() {
+            @Override
+            public boolean onMenuItemSelected(MenuBuilder menu, MenuItem item) {
+                switch (item.getItemId())  {
+                    case R.id.menu_day_direction: {
+                        moveToMap();
+                        break;
+                    }
+                    case R.id.menu_day_edit_trip: {
+                        Intent intent = new Intent(getApplicationContext(), PlanEditActivity.class);
+                        startActivity(intent);
+                    }
+                }
+                return false;
+            }
+
+            @Override
+            public void onMenuModeChange(MenuBuilder menu) {}
+        });
+        optionsMenu.show();
+    }
+
+    @SuppressLint("RestrictedApi")
+    public void showActivityMenu() {
+        @SuppressLint("RestrictedApi") MenuBuilder menuBuilder =new MenuBuilder(this);
+        MenuInflater inflater = new MenuInflater(this);
+        inflater.inflate(R.menu.trip_activity_action, menuBuilder);
+        @SuppressLint("RestrictedApi") MenuPopupHelper optionsMenu = new MenuPopupHelper(this, menuBuilder, btnActivityAction);
+        optionsMenu.setForceShowIcon(true);
+        menuBuilder.setCallback(new MenuBuilder.Callback() {
+            @Override
+            public boolean onMenuItemSelected(MenuBuilder menu, MenuItem item) {
+                switch (item.getItemId())  {
+                    case R.id.menu_activity_direction: {
+                        moveToMap();
+                        break;
+                    }
+                }
+                return false;
+            }
+
+            @Override
+            public void onMenuModeChange(MenuBuilder menu) {}
+        });
+        optionsMenu.show();
     }
 }

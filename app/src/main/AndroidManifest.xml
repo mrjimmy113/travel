@@ -26,8 +26,9 @@
         </activity>
         <activity android:name=".PlanActivity" />
         <activity android:name=".TripBankActivity" />
-        <activity android:name=".MapActivity"></activity>
-        <activity android:name=".UserInfoActivity"></activity>
+        <activity android:name=".MapActivity" />
+        <activity android:name=".UserInfoActivity" />
+        <activity android:name=".PlanEditActivity"></activity>
     </application>
 
 </manifest>
