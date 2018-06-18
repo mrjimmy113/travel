@@ -28,7 +28,8 @@
         <activity android:name=".TripBankActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".UserInfoActivity" />
-        <activity android:name=".UserProfileActivity"></activity>
+        <activity android:name=".PlanEditActivity" />
+        <activity android:name=".PlaceAroundActivity"></activity>
     </application>
 
 </manifest>

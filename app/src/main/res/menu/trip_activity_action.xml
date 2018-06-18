@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_activity_direction"
+        android:icon="@drawable/ic_direction"
+        android:title="Direction"
+        />
+    <item
+        android:icon="@drawable/ic_trip_cancel"
+        android:title="Cancel Activity"
+        />
+</menu>
