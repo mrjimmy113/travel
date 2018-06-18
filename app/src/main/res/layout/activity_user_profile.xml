@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="day01.quang.projectmon.UserInfoActivity">
+    tools:context=".UserProfileActivity">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -38,84 +38,84 @@
     </FrameLayout>
     <!--ACCOUNT INFORMATION-->
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <LinearLayout
+            android:layout_height="50dp"
+            android:background="#e0e0e0"
+            android:paddingLeft="10dp">
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="#e0e0e0"
-                android:paddingLeft="10dp">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="Account Information"
-                    android:textSize="20sp"
-                    android:gravity="center_vertical"
-                    android:textColor="@drawable/ic_assignment_black_24dp"/>
-            </LinearLayout>
-            <LinearLayout
+                android:text="Account Information"
+                android:textSize="20sp"
+                android:gravity="center_vertical"
+                android:textColor="@drawable/ic_assignment_black_24dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+            <!--USERNAME-->
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp">
-                <!--USERNAME-->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:text="User name"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:textColor="@drawable/ic_assignment_black_24dp"
-                    android:textSize="18sp"
-                    android:text="thanhtk"/>
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="9dp"
-                    android:background="#e0e0e0"/>
-                <!--PASSWORD-->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:text="Password"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:textColor="@drawable/ic_assignment_black_24dp"
-                    android:textSize="18sp"
-                    android:text="******"/>
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="9dp"
-                    android:background="#e0e0e0"/>
-                <!--CONFIRM PASSWORD-->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:text="Confirm Password"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:textColor="@drawable/ic_assignment_black_24dp"
-                    android:textSize="18sp"
-                    android:text="******"/>
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="9dp"
-                    android:background="#e0e0e0"/>
-            </LinearLayout>
+                android:layout_marginTop="9dp"
+                android:text="User name"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:textColor="@drawable/ic_assignment_black_24dp"
+                android:textSize="18sp"
+                android:text="thanhtk"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_marginTop="9dp"
+                android:background="#e0e0e0"/>
+            <!--PASSWORD-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="Password"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:textColor="@drawable/ic_assignment_black_24dp"
+                android:textSize="18sp"
+                android:text="******"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_marginTop="9dp"
+                android:background="#e0e0e0"/>
+            <!--CONFIRM PASSWORD-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="Confirm Password"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:textColor="@drawable/ic_assignment_black_24dp"
+                android:textSize="18sp"
+                android:text="******"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_marginTop="9dp"
+                android:background="#e0e0e0"/>
         </LinearLayout>
+    </LinearLayout>
     <!--PERSONAL INFORMATION-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -200,10 +200,10 @@
                 android:textSize="18sp" />
 
             <View
-            android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:layout_marginTop="9dp"
-            android:background="#e0e0e0" />
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_marginTop="9dp"
+                android:background="#e0e0e0" />
 
         </LinearLayout>
     </LinearLayout>

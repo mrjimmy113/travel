@@ -38,7 +38,12 @@ public class MainActivity extends AppCompatActivity {
                         menuItem.setChecked(true);
                         // close drawer when item is tapped
                         mDrawerLayout.closeDrawers();
-
+                        switch(menuItem.getItemId()){
+                            case R.id.nav_camera:
+                                Intent intent = new Intent(MainActivity.this, UserProfileActivity.class);
+                                startActivity(intent);
+                                break;
+                        }
                         // Add code here to update the UI based on the item selected
                         // For example, swap UI fragments here
 
