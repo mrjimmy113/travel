@@ -29,7 +29,8 @@
         <activity android:name=".MapActivity" />
         <activity android:name=".UserInfoActivity" />
         <activity android:name=".PlanEditActivity" />
-        <activity android:name=".PlaceAroundActivity"></activity>
+        <activity android:name=".PlaceAroundActivity" />
+        <activity android:name=".ConfirmTripActivity"></activity>
     </application>
 
 </manifest>
