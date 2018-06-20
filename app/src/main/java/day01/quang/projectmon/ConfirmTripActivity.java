@@ -15,6 +15,8 @@ public class ConfirmTripActivity extends AppCompatActivity {
 
     public void moveToHome(View view) {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("IsConfirm", true);
         startActivity(intent);
     }
 }

@@ -72,6 +72,16 @@ public class MainActivity extends AppCompatActivity {
                 showDayMenu();
             }
         });
+        if(getIntent().hasExtra("IsConfirm")) {
+            LinearLayout no_data = (LinearLayout) findViewById(R.id.layout_no_data);
+            LinearLayout yourTrip = (LinearLayout) findViewById(R.id.layout_yourTrip);
+            LinearLayout budget= (LinearLayout) findViewById(R.id.layout_budget);
+            CardView card = (CardView) findViewById(R.id.layout_CardView);
+            no_data.setVisibility(View.GONE);
+            yourTrip.setVisibility(View.VISIBLE);
+            card.setVisibility(View.VISIBLE);
+            budget.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
@@ -86,12 +96,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void switchScreen(View view) {
-        LinearLayout no_data = (LinearLayout) findViewById(R.id.layout_no_data);
-        LinearLayout yourTrip = (LinearLayout) findViewById(R.id.layout_yourTrip);
-        CardView card = (CardView) findViewById(R.id.layout_CardView);
-        no_data.setVisibility(View.GONE);
-        yourTrip.setVisibility(View.VISIBLE);
-        card.setVisibility(View.VISIBLE);
         Intent intent = new Intent(this, PlanActivity.class);
         startActivity(intent);
     }
