@@ -24,9 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-        <activity android:name=".PlanActivity" />
-        <activity android:name=".TripBankActivity" />
         <activity android:name=".FavoriteActivity" />
         <activity android:name=".SettingActivity" />
         <activity android:name=".Detail1Activity" />
@@ -35,7 +32,7 @@
         <activity android:name=".DetailHotel2Activity" />
         <activity android:name=".DetailFood1Activity" />
         <activity android:name=".DetailFood2Activity"></activity>
-=======
+
         <activity
             android:name=".PlanActivity"
             android:configChanges="orientation"
@@ -72,11 +69,7 @@
             android:screenOrientation="portrait"
 <<<<<<< Updated upstream
             />
->>>>>>> origin/master
-=======
-            android:theme="@style/AppTheme" />
-        <activity android:name=".PartnerActivity"></activity>
->>>>>>> Stashed changes
+
     </application>
 
 </manifest>

@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
                         // close drawer when item is tapped
                         mDrawerLayout.closeDrawers();
 
-<<<<<<< HEAD
                         // switch to new view
                         switch (menuItem.getItemId()) {
                             case R.id.nav_favorite:
@@ -63,15 +62,10 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                         }
 
-                        // Add code here to update the UI based on the item selected
-                        // For example, swap UI fragments here
-=======
                         if(menuItem.getItemId() == R.id.nav_camera) {
                             Intent intent = new Intent(MainActivity.this, UserInfoActivity.class);
                             startActivity(intent);
                         }
-
->>>>>>> origin/master
 
                         return true;
                     }

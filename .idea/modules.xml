@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< Updated upstream
-<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/Pack&amp;Go.iml" filepath="$PROJECT_DIR$/Pack&amp;Go.iml" />
-=======
-      <module fileurl="file://D:\Quang\HCI\travel\PackNGo.iml" filepath="D:\Quang\HCI\travel\PackNGo.iml" />
->>>>>>> origin/master
-=======
-      <module fileurl="file://$PROJECT_DIR$/PackNGo.iml" filepath="$PROJECT_DIR$/PackNGo.iml" />
->>>>>>> Stashed changes
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
