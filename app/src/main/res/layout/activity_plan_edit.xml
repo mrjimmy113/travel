@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="day01.quang.projectmon.PlanActivity">
-
-
-
+    android:orientation="vertical"
+    tools:context="day01.quang.projectmon.PlanEditActivity">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -40,12 +37,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:gravity="center_vertical"
-                android:text="New Trip Plan"
+                android:text="Edit Trip Plan"
                 android:textColor="@color/toolBar_text"
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <ImageButton
-                android:onClick="moveToBank"
                 android:layout_weight="2"
                 android:background="@color/colorPrimary"
                 android:src="@drawable/ic_save"
@@ -54,6 +50,7 @@
         </LinearLayout>
     </FrameLayout>
     <EditText
+        android:text="Trip to Nha Trang"
         android:layout_marginHorizontal="20dp"
         android:hint="Name your trip"
         android:layout_width="match_parent"
@@ -92,6 +89,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent" />
                     <EditText
+                        android:text="Nha Trang - Khanh Hoa"
                         android:hint="Where you want to go ?"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
@@ -105,6 +103,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent" />
                     <EditText
+                        android:text="Vinpearl Land Hotel And Resort"
                         android:hint="Where to stay overnight ?"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
@@ -144,6 +143,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent" />
                             <EditText
+                                android:text="Bình ba Island, Khanh Hoa"
                                 android:hint="What place to visit ?"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content" />
@@ -163,6 +163,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent" />
                                 <EditText
+                                    android:text="8:30 AM"
                                     android:hint="Arrive Time"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content" />
@@ -177,6 +178,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent" />
                                 <EditText
+                                    android:text="360 m"
                                     android:hint="Spent time"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content" />
@@ -230,5 +232,4 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
 </LinearLayout>
