@@ -67,7 +67,6 @@
             android:name=".ConfirmTripActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
-<<<<<<< Updated upstream
             />
 
     </application>
