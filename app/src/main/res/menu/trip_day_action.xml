@@ -12,8 +12,18 @@
         android:title="Edit Trip"
         />
     <item
+        android:id="@+id/menu_day_partner"
+        android:icon="@drawable/ic_menu_partner"
+        android:title="Travel Partner"
+        />
+    <item
         android:icon="@drawable/ic_trip_skip_day"
         android:title="Skip day"
+        />
+    <item
+        android:id="@+id/menu_day_finish_trip"
+        android:icon="@drawable/ic_menu_finish"
+        android:title="Finish Trip"
         />
     <item
         android:icon="@drawable/ic_trip_cancel"

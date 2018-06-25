@@ -36,21 +36,7 @@
                     />
 
             </LinearLayout>
-            <LinearLayout
-                android:layout_gravity="center"
-                style="@style/ic_edit_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
 
-                <ImageView
-                    android:src="@drawable/ic_budget"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
-                <EditText
-                    android:hint="Your budget"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
             <LinearLayout
                 android:layout_marginHorizontal="10dp"
                 android:orientation="vertical"
@@ -79,14 +65,14 @@
                                 android:textSize="20sp"
                                 android:background="@color/colorPrimary"
                                 android:textColor="@color/toolBar_text"
-                                android:text="Booking"
+                                android:text="Starting Information"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="9"
                                 />
                         </LinearLayout>
                         <LinearLayout
-                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginHorizontal="50dp"
                             android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -96,12 +82,27 @@
                                 android:layout_height="wrap_content">
 
                                 <ImageView
-                                    android:src="@drawable/ic_hotel"
+                                    android:src="@drawable/ic_budget"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent" />
-                                <TextView
-                                    style="@style/review_trip_text"
-                                    android:text="Vinpearl Land Hotel And Resort"
+                                <EditText
+                                    android:inputType="number"
+                                    android:hint="Your budget"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/ic_edit_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:src="@drawable/ic_calender"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent" />
+                                <EditText
+                                    android:inputType="number"
+                                    android:hint="Start date"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content" />
                             </LinearLayout>
@@ -110,42 +111,111 @@
                                 style="@style/ic_edit_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
-                                <LinearLayout
-                                    android:paddingRight="10dp"
-                                    android:layout_weight="1"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content">
 
-                                    <ImageView
-                                        android:src="@drawable/ic_start_time"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent" />
-                                    <EditText
-                                        android:hint="Check in"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content" />
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:layout_weight="1"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content">
-
-                                    <ImageView
-                                        android:src="@drawable/ic_spent_time"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent" />
-                                    <EditText
-                                        android:hint="Check out"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content" />
-                                </LinearLayout>
 
                             </LinearLayout>
-                            <View
-                                android:layout_marginVertical="5dp"
-                                android:background="#c6c6c6"
+
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:paddingBottom="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:weightSum="11"
+                            android:background="@color/colorPrimary"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp">
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:paddingLeft="15dp"
+                                android:textSize="20sp"
+                                android:background="@color/colorPrimary"
+                                android:textColor="@color/toolBar_text"
+                                android:text="Travel Partner"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="9"
+                                />
+                            <ImageButton
+                                android:src="@drawable/ic_partner_add"
+                                android:background="@color/colorPrimary"
+                                android:layout_weight="2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_marginHorizontal="10dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_marginTop="15dp"
+                                android:weightSum="10"
+                                style="@style/ic_edit_text"
                                 android:layout_width="match_parent"
-                                android:layout_height="3dp"/>
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:src="@drawable/ic_partner"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent" />
+                                <TextView
+                                    android:textSize="18sp"
+                                    android:layout_weight="8"
+                                    android:text="Lionel Messi"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent" />
+                                <ImageButton
+                                    android:background="@color/toolBar_text"
+                                    android:src="@drawable/ic_partner_remove"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginTop="15dp"
+                                android:weightSum="10"
+                                style="@style/ic_edit_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:src="@drawable/ic_partner"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent" />
+                                <TextView
+                                    android:textSize="18sp"
+                                    android:layout_weight="8"
+                                    android:text="Cristiano Ronaldo"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent" />
+                                <ImageButton
+                                    android:background="@color/toolBar_text"
+                                    android:src="@drawable/ic_partner_remove"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+
 
 
                         </LinearLayout>

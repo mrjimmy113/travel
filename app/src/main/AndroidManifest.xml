@@ -38,47 +38,45 @@
 =======
         <activity
             android:name=".PlanActivity"
-            android:theme="@style/AppTheme"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
-            />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".TripBankActivity"
-            android:theme="@style/AppTheme"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
-            />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".MapActivity"
-            android:theme="@style/AppTheme"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
-            />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".UserInfoActivity"
-            android:theme="@style/AppTheme"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
-            />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".PlanEditActivity"
-            android:theme="@style/AppTheme"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
-            />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".PlaceAroundActivity"
-            android:theme="@style/AppTheme"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
-            />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ConfirmTripActivity"
-            android:theme="@style/AppTheme"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
+<<<<<<< Updated upstream
             />
 >>>>>>> origin/master
+=======
+            android:theme="@style/AppTheme" />
+        <activity android:name=".PartnerActivity"></activity>
+>>>>>>> Stashed changes
     </application>
 
 </manifest>

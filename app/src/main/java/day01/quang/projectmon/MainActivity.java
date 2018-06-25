@@ -152,6 +152,10 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), PlanEditActivity.class);
                         startActivity(intent);
                     }
+                    case R.id.menu_day_partner: {
+                        Intent intent = new Intent(getApplicationContext(), PartnerActivity.class);
+                        startActivity(intent);
+                    }
                 }
                 return false;
             }
