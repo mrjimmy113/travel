@@ -50,11 +50,28 @@ public class MainActivity extends AppCompatActivity {
                         // close drawer when item is tapped
                         mDrawerLayout.closeDrawers();
 
+<<<<<<< HEAD
+                        // switch to new view
+                        switch (menuItem.getItemId()) {
+                            case R.id.nav_favorite:
+                                Intent intent = new Intent(MainActivity.this, FavoriteActivity.class);
+                                startActivity(intent);
+                                break;
+                            case R.id.nav_setting:
+                                Intent intentSetting = new Intent(MainActivity.this, SettingActivity.class);
+                                startActivity(intentSetting);
+                                break;
+                        }
+
+                        // Add code here to update the UI based on the item selected
+                        // For example, swap UI fragments here
+=======
                         if(menuItem.getItemId() == R.id.nav_camera) {
                             Intent intent = new Intent(MainActivity.this, UserInfoActivity.class);
                             startActivity(intent);
                         }
 
+>>>>>>> origin/master
 
                         return true;
                     }
@@ -90,9 +107,14 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 mDrawerLayout.openDrawer(GravityCompat.START);
-                return true;
+                break;
+            case R.id.nav_favorite:
+                Intent intent = new Intent(this, FavoriteActivity.class);
+                this.startActivity(intent);
+               break;
+            default: return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 
     public void switchScreen(View view) {
