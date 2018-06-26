@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 
 public class PartnerActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
+    private NavigationView navigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +25,7 @@ public class PartnerActivity extends AppCompatActivity {
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
 
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView = findViewById(R.id.nav_view);
 
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
@@ -42,7 +43,7 @@ public class PartnerActivity extends AppCompatActivity {
                     }
                 });
 
-        mDrawerLayout.openDrawer(navigationView);
+
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -53,5 +54,9 @@ public class PartnerActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void showPartnerList(View view) {
+        mDrawerLayout.openDrawer(navigationView);
     }
 }

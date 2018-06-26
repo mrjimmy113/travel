@@ -7,26 +7,14 @@
         android:title="Direction"
         />
     <item
-        android:id="@+id/menu_day_edit_trip"
-        android:icon="@drawable/ic_trip_edit"
-        android:title="Edit Trip"
+        android:id="@+id/menu_budget_update"
+        android:icon="@drawable/ic_budget_update"
+        android:title="Budget Update"
         />
-    <item
-        android:id="@+id/menu_day_partner"
-        android:icon="@drawable/ic_menu_partner"
-        android:title="Travel Partner"
-        />
+
     <item
         android:icon="@drawable/ic_trip_skip_day"
         android:title="Skip day"
         />
-    <item
-        android:id="@+id/menu_day_finish_trip"
-        android:icon="@drawable/ic_menu_finish"
-        android:title="Finish Trip"
-        />
-    <item
-        android:icon="@drawable/ic_trip_cancel"
-        android:title="Cancel Trip"
-        />
+
 </menu>

@@ -31,8 +31,7 @@
         <activity android:name=".DetailHotel1Activity" />
         <activity android:name=".DetailHotel2Activity" />
         <activity android:name=".DetailFood1Activity" />
-        <activity android:name=".DetailFood2Activity"></activity>
-
+        <activity android:name=".DetailFood2Activity" />
         <activity
             android:name=".PlanActivity"
             android:configChanges="orientation"
@@ -66,9 +65,12 @@
         <activity
             android:name=".ConfirmTripActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"
-            />
-
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PartnerActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ReportActivity"></activity>
     </application>
 
 </manifest>

@@ -144,6 +144,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent" />
                             <EditText
+                                android:onClick="openPlacePicker"
+                                android:focusable="false"
                                 android:hint="What place to visit ?"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content" />
@@ -163,6 +165,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent" />
                                 <EditText
+                                    android:focusable="false"
+                                    android:inputType="time"
+                                    android:id="@+id/edt_Time"
                                     android:onClick="openTimePicker"
                                     android:hint="Departure time"
                                     android:layout_width="match_parent"

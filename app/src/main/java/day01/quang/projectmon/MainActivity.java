@@ -1,7 +1,9 @@
 package day01.quang.projectmon;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,17 +15,22 @@ import android.support.v7.view.menu.MenuPopupHelper;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.ContextMenu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private ImageButton btnDayAction, btnActivityAction;
+    private FloatingActionButton fab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnDayAction = findViewById(R.id.btnDayMenuAction);
         btnActivityAction = findViewById(R.id.btnActivityMenuAction);
+        fab = findViewById(R.id.btnTripAction);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -93,6 +101,42 @@ public class MainActivity extends AppCompatActivity {
             card.setVisibility(View.VISIBLE);
             budget.setVisibility(View.VISIBLE);
         }
+
+        fab.setOnTouchListener(new View.OnTouchListener() {
+            float startX;
+            float startRawX;
+            float distanceX;
+            int lastAction;
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        startX = view.getX() - event.getRawX();
+                        startRawX = event.getRawX();
+                        lastAction = MotionEvent.ACTION_DOWN;
+                        break;
+
+                    case MotionEvent.ACTION_MOVE:
+                        view.setX(event.getRawX() + startX);
+                        view.setY(event.getRawY() + startX);
+
+                        lastAction = MotionEvent.ACTION_MOVE;
+                        break;
+
+                    case MotionEvent.ACTION_UP:
+                        distanceX = event.getRawX()-startRawX;
+                        if (Math.abs(distanceX)< 10){
+                            showTripTool();
+                        }
+                        break;
+                    case MotionEvent.ACTION_BUTTON_PRESS:
+
+                    default:
+                        return false;
+                }
+                return true;
+            }
+        });
     }
 
     @Override
@@ -142,14 +186,11 @@ public class MainActivity extends AppCompatActivity {
                         moveToMap();
                         break;
                     }
-                    case R.id.menu_day_edit_trip: {
-                        Intent intent = new Intent(getApplicationContext(), PlanEditActivity.class);
-                        startActivity(intent);
+                    case R.id.menu_budget_update: {
+                        budgetDialog();
+                        break;
                     }
-                    case R.id.menu_day_partner: {
-                        Intent intent = new Intent(getApplicationContext(), PartnerActivity.class);
-                        startActivity(intent);
-                    }
+
                 }
                 return false;
             }
@@ -185,8 +226,49 @@ public class MainActivity extends AppCompatActivity {
         optionsMenu.show();
     }
 
-    public void placeAround(View view) {
-        Intent intent = new Intent(this, PlaceAroundActivity.class);
-        startActivity(intent);
+    @SuppressLint("RestrictedApi")
+    public void showTripTool() {
+        @SuppressLint("RestrictedApi") MenuBuilder menuBuilder =new MenuBuilder(this);
+        MenuInflater inflater = new MenuInflater(this);
+        inflater.inflate(R.menu.trip_tool, menuBuilder);
+        @SuppressLint("RestrictedApi") MenuPopupHelper optionsMenu = new MenuPopupHelper(this, menuBuilder, fab);
+        optionsMenu.setForceShowIcon(true);
+        menuBuilder.setCallback(new MenuBuilder.Callback() {
+            @Override
+            public boolean onMenuItemSelected(MenuBuilder menu, MenuItem item) {
+                switch (item.getItemId())  {
+                    case R.id.menu_day_edit_trip: {
+                        Intent intent = new Intent(getApplicationContext(), PlanEditActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+                    case R.id.menu_day_partner: {
+                        Intent intent = new Intent(getApplicationContext(), PartnerActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+                    case R.id.menu_budget_report: {
+                        Intent intent = new Intent(getApplicationContext(), ReportActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+                }
+                return false;
+            }
+
+            @Override
+            public void onMenuModeChange(MenuBuilder menu) {}
+        });
+        optionsMenu.show();
     }
+
+    public void budgetDialog() {
+        Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_budget_update);
+        dialog.show();
+    }
+
+
+
 }
