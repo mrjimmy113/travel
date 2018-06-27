@@ -37,183 +37,315 @@
         </LinearLayout>
     </FrameLayout>
     <!--ACCOUNT INFORMATION-->
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+    <!--<ScrollView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent">-->
+        <!--<LinearLayout-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="fill_parent">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical">-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="#e0e0e0"-->
+                    <!--android:paddingLeft="10dp">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="50dp"-->
+                        <!--android:text="Account Information"-->
+                        <!--android:textSize="20sp"-->
+                        <!--android:gravity="center"/>-->
+
+                <!--</LinearLayout>-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:paddingLeft="10dp"-->
+                    <!--android:paddingRight="10dp">-->
+                    <!--&lt;!&ndash;USERNAME&ndash;&gt;-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:text="User name"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:textSize="18sp"-->
+                        <!--android:text="thanhtk"/>-->
+                    <!--<View-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="2dp"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:background="#e0e0e0"/>-->
+                    <!--&lt;!&ndash;PASSWORD&ndash;&gt;-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:text="Password"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:textSize="18sp"-->
+                        <!--android:text="******"/>-->
+                    <!--<View-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="2dp"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:background="#e0e0e0"/>-->
+                    <!--&lt;!&ndash;CONFIRM PASSWORD&ndash;&gt;-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:text="Confirm Password"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:textSize="18sp"-->
+                        <!--android:text="******"/>-->
+                    <!--<View-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="2dp"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:background="#e0e0e0"/>-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+            <!--&lt;!&ndash;PERSONAL INFORMATION&ndash;&gt;-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="#e0e0e0"-->
+                    <!--android:paddingLeft="10dp">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="50dp"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="Personal Information"-->
+                        <!--android:textSize="20sp" />-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:paddingLeft="10dp"-->
+                    <!--android:paddingRight="10dp">-->
+                    <!--&lt;!&ndash;USERNAME&ndash;&gt;-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:text="Name" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:text="Tran Kim Thanh"-->
+                        <!--android:textSize="18sp" />-->
+
+                    <!--<View-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="2dp"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:background="#e0e0e0" />-->
+                    <!--&lt;!&ndash;PASSWORD&ndash;&gt;-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:text="Email" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:text="kimthanh932000@gmail.com"-->
+                        <!--android:textSize="18sp" />-->
+
+                    <!--<View-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="2dp"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:background="#e0e0e0" />-->
+                    <!--&lt;!&ndash;CONFIRM PASSWORD&ndash;&gt;-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:text="Phone" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:text="0123456789"-->
+                        <!--android:textSize="18sp" />-->
+
+                    <!--<View-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="2dp"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:background="#e0e0e0" />-->
+
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+            <!--<Button-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="70dp"-->
+                <!--android:text="Update"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:textSize="20sp"/>-->
+        <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <android.support.v7.widget.CardView
+            android:layout_above="@id/layout_infor"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardCornerRadius="40dp"
+            android:background="@drawable/beach"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+            <ImageView
+                android:scaleType="centerCrop"
+                android:src="@drawable/beach"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v7.widget.CardView>
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="#e0e0e0"
-                    android:paddingLeft="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:text="Account Information"
-                        android:textSize="20sp"
-                        android:gravity="center"/>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
-                    <!--USERNAME-->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="9dp"
-                        android:text="User name"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="9dp"
-                        android:textSize="18sp"
-                        android:text="thanhtk"/>
-                    <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="2dp"
-                        android:layout_marginTop="9dp"
-                        android:background="#e0e0e0"/>
-                    <!--PASSWORD-->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="9dp"
-                        android:text="Password"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="9dp"
-                        android:textSize="18sp"
-                        android:text="******"/>
-                    <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="2dp"
-                        android:layout_marginTop="9dp"
-                        android:background="#e0e0e0"/>
-                    <!--CONFIRM PASSWORD-->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="9dp"
-                        android:text="Confirm Password"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="9dp"
-                        android:textSize="18sp"
-                        android:text="******"/>
-                    <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="2dp"
-                        android:layout_marginTop="9dp"
-                        android:background="#e0e0e0"/>
-                </LinearLayout>
-            </LinearLayout>
-            <!--PERSONAL INFORMATION-->
-            <LinearLayout
+                android:text="Quang Nguyen"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="#000591"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="#e0e0e0"
-                    android:paddingLeft="10dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:gravity="center"
-                        android:text="Personal Information"
-                        android:textSize="20sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
-                    <!--USERNAME-->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="9dp"
-                        android:text="Name" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="9dp"
-                        android:text="Tran Kim Thanh"
-                        android:textSize="18sp" />
-
-                    <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="2dp"
-                        android:layout_marginTop="9dp"
-                        android:background="#e0e0e0" />
-                    <!--PASSWORD-->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="9dp"
-                        android:text="Email" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="9dp"
-                        android:text="kimthanh932000@gmail.com"
-                        android:textSize="18sp" />
-
-                    <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="2dp"
-                        android:layout_marginTop="9dp"
-                        android:background="#e0e0e0" />
-                    <!--CONFIRM PASSWORD-->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="9dp"
-                        android:text="Phone" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="9dp"
-                        android:text="0123456789"
-                        android:textSize="18sp" />
-
-                    <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="2dp"
-                        android:layout_marginTop="9dp"
-                        android:background="#e0e0e0" />
-
-                </LinearLayout>
-            </LinearLayout>
-            <Button
-                android:layout_width="150dp"
-                android:layout_height="70dp"
-                android:text="Update"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:textSize="20sp"/>
+                android:text="Tourist"
+                android:textSize="13dp"
+                android:textColor="#000591"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
         </LinearLayout>
-    </ScrollView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ebe9e7"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:background="#fff">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_public_black_24dp"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Facebook"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Connected"
+                android:gravity="right"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:background="#fff">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_stay_current_portrait_black_24dp"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+84 123456789"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:background="#fff">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_email_black_24dp"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="kimthanh@gmail.com"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:background="#fff">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_place_black_24dp"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quang Trung Software Park \nDistrict 12\nHo Chi Minh City"
+                android:lineSpacingExtra="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
