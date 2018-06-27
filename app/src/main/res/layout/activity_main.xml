@@ -430,6 +430,7 @@
         </LinearLayout>
 
         <android.support.design.widget.FloatingActionButton
+            android:visibility="gone"
             android:src="@drawable/ic_trip_edit_tool"
             android:id="@+id/btnTripAction"
             android:layout_width="80dp"
@@ -441,6 +442,7 @@
 
     <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
     <android.support.design.widget.NavigationView
+
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
             yourTrip.setVisibility(View.VISIBLE);
             card.setVisibility(View.VISIBLE);
             budget.setVisibility(View.VISIBLE);
+            fab.setVisibility(View.VISIBLE);
         }
 
         fab.setOnTouchListener(new View.OnTouchListener() {
