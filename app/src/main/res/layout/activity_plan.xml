@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context="day01.quang.projectmon.PlanActivity">
 
 
@@ -22,18 +23,20 @@
             app:titleTextColor="@color/toolBar_text" />
 
         <LinearLayout
+            android:weightSum="10"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageButton
-                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:background="#00ff0000"
-                android:paddingLeft="10dp"
                 android:src="@drawable/ic_function_back" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_weight="7"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:gravity="center_vertical"
@@ -41,6 +44,13 @@
                 android:textColor="@color/toolBar_text"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+            <ImageButton
+                android:onClick="moveToBank"
+                android:layout_weight="2"
+                android:background="@color/colorPrimary"
+                android:src="@drawable/ic_save"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
         </LinearLayout>
     </FrameLayout>
     <EditText
@@ -134,17 +144,19 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent" />
                             <EditText
+                                android:onClick="openPlacePicker"
+                                android:focusable="false"
                                 android:hint="What place to visit ?"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content" />
                         </LinearLayout>
                         <LinearLayout
-                            android:weightSum="2"
+                            android:weightSum="3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <LinearLayout
                                 android:paddingRight="10dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content">
 
@@ -153,24 +165,15 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent" />
                                 <EditText
-                                    android:hint="Arrive Time"
+                                    android:focusable="false"
+                                    android:inputType="time"
+                                    android:id="@+id/edt_Time"
+                                    android:onClick="openTimePicker"
+                                    android:hint="Departure time"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content" />
                             </LinearLayout>
-                            <LinearLayout
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content">
 
-                                <ImageView
-                                    android:src="@drawable/ic_spent_time"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent" />
-                                <EditText
-                                    android:hint="Spent time"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
-                            </LinearLayout>
 
                         </LinearLayout>
                         <View

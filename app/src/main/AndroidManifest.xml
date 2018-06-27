@@ -24,6 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".PlanActivity" />
         <activity android:name=".TripBankActivity" />
         <activity android:name=".MapActivity" />
@@ -31,6 +32,55 @@
         <activity android:name=".PlanEditActivity" />
         <activity android:name=".PlaceAroundActivity" />
         <activity android:name=".activity_setting"></activity>
+=======
+        <activity android:name=".FavoriteActivity" />
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".Detail1Activity" />
+        <activity android:name=".DetailDLActivity" />
+        <activity android:name=".DetailHotel1Activity" />
+        <activity android:name=".DetailHotel2Activity" />
+        <activity android:name=".DetailFood1Activity" />
+        <activity android:name=".DetailFood2Activity" />
+        <activity
+            android:name=".PlanActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".TripBankActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MapActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".UserInfoActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PlanEditActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PlaceAroundActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ConfirmTripActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PartnerActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ReportActivity"></activity>
+>>>>>>> origin/master
     </application>
 
 </manifest>
