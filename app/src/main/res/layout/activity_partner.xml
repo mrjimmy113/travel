@@ -41,6 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageButton
+                    android:onClick="moveBack"
                     android:paddingLeft="10dp"
                     android:background="#00ff0000"
                     android:src="@drawable/ic_function_back"

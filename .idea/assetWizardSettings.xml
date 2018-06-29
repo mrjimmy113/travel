@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/D:/IDE/Android/plugins/android/lib/android.jar!/images/material_design_icons/editor/ic_mode_edit_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/D:/IDE/Android/plugins/android/lib/android.jar!/images/material_design_icons/social/ic_person_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,7 +28,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_trip_edit_tool" />
+                            <entry key="outputName" value="ic_report_avatar" />
                             <entry key="sourceFile" value="C:\Users\Quang" />
                           </map>
                         </option>

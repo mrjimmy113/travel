@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item
+        android:id="@+id/menu_day_direction"
+        android:icon="@drawable/ic_direction"
+        android:title="Hotel Direction"
+        />
     <item
         android:id="@+id/menu_day_edit_trip"
         android:icon="@drawable/ic_trip_edit"
@@ -10,6 +14,11 @@
         android:id="@+id/menu_day_partner"
         android:icon="@drawable/ic_menu_partner"
         android:title="Travel Partner"
+        />
+    <item
+        android:id="@+id/menu_budget_update"
+        android:icon="@drawable/ic_budget_update"
+        android:title="Budget Update"
         />
     <item
         android:id="@+id/menu_budget_report"

@@ -49,8 +49,24 @@
             android:hint="Amount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-    </LinearLayout>
 
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginHorizontal="30dp"
+        style="@style/ic_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_message"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <EditText
+            android:inputType="textImeMultiLine"
+            android:hint="Message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
     <LinearLayout
         android:weightSum="2"
         android:background="@color/colorPrimary"

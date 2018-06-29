@@ -59,4 +59,13 @@ public class PlanActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PlaceAroundActivity.class);
         startActivity(intent);
     }
+
+    public void moveBack(View view) {
+        this.finish();
+    }
+
+    public void moveToTypeChoose(View view) {
+        Intent intent = new Intent(this, ActivityTypeActivity.class);
+        startActivity(intent);
+    }
 }

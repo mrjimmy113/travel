@@ -59,4 +59,8 @@ public class PartnerActivity extends AppCompatActivity {
     public void showPartnerList(View view) {
         mDrawerLayout.openDrawer(navigationView);
     }
+
+    public void moveBack(View view) {
+        this.finish();
+    }
 }

@@ -25,6 +25,7 @@
             android:layout_height="match_parent">
 
             <ImageButton
+                android:onClick="moveBack"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

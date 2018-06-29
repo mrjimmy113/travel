@@ -173,211 +173,274 @@
                         android:layout_height="wrap_content" />
                 </LinearLayout>
             </LinearLayout>
-            <android.support.v7.widget.CardView
+            <LinearLayout
                 android:visibility="gone"
-                android:id="@+id/layout_CardView"
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                app:cardCornerRadius="10dp"
-                card_view:cardPreventCornerOverlap="false"
+                android:id="@+id/layout_todayPlan"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:weightSum="6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
+                <View
+                    android:background="@drawable/horizontal_pipe"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="5dp"/>
+                <TextView
+                    android:textColor="#ffff"
+                    android:textStyle="bold"
+                    android:background="@drawable/horizontal_pipe"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="Today Plan"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:background="@drawable/horizontal_pipe"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="5dp"/>
+            </LinearLayout>
+            <!--Here-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/layout_CardView"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
                 <LinearLayout
-                    android:orientation="vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:weightSum="10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <FrameLayout
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical"
+                                android:weightSum="2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <View
+                                    android:layout_weight="1"
+                                    android:layout_width="5dp"
+                                    android:layout_height="0dp"/>
+                                <View
+                                    android:layout_weight="1"
+                                    android:background="@color/colorPrimary"
+                                    android:layout_width="5dp"
+                                    android:layout_height="0dp"/>
+                            </LinearLayout>
+                            <ImageView
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/icon_inuse"
+                                android:src="@drawable/ic_main_car"
+                                android:padding="5dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp" />
+                        </RelativeLayout>
+                    </FrameLayout>
                     <LinearLayout
                         android:weightSum="10"
-                        android:background="@color/colorPrimary"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp">
-                        <TextView
-                            android:gravity="center_vertical"
-                            android:paddingLeft="15dp"
-                            android:textSize="20sp"
-                            android:background="@color/colorPrimary"
-                            android:textColor="@color/toolBar_text"
-                            android:text="Day 1"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="9"
-                            />
-                        <ImageButton
-                            android:layout_weight="1"
-                            android:background="@color/colorPrimary"
-                            android:src="@drawable/ic_trip_menu"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:id="@+id/btnDayMenuAction"
-                            />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_marginHorizontal="10dp"
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
+                        android:layout_marginVertical="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:background="@drawable/timeline_inuse"
+                        android:layout_weight="9"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
-                            style="@style/ic_edit_text"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <ImageView
-                                android:src="@drawable/ic_destination"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent" />
+                            android:layout_weight="7"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
                             <TextView
-                                style="@style/review_trip_text"
-                                android:text="Nha Trang - Khanh Hoa"
+                                android:textStyle="bold"
+                                android:textColor="@color/toolBar_text"
+                                android:text="8:00 AM  Traveling to"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textSize="16sp"
+                                android:textColor="@color/toolBar_text"
+                                android:text="Binh Ba Island, Nha Trang"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content" />
                         </LinearLayout>
-                        <LinearLayout
-                            style="@style/ic_edit_text"
+                        <ImageButton
+                            android:id="@+id/timeline1"
+                            android:onClick="activityMenu1"
+                            android:src="@drawable/ic_trip_menu"
+                            android:background="@color/ic_new_trip"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginHorizontal="10dp"
+                    android:weightSum="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <FrameLayout
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="match_parent">
 
-                            <ImageView
-                                android:src="@drawable/ic_hotel"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent" />
-                            <TextView
-                                style="@style/review_trip_text"
-                                android:text="Vinpearl Land Hotel And Resort"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
-                        </LinearLayout>
-                        <android.support.v7.widget.CardView
-                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                            app:cardCornerRadius="10dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
                             <LinearLayout
-                                android:paddingBottom="10dp"
+                                android:layout_centerInParent="true"
                                 android:orientation="vertical"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-                                <LinearLayout
-                                    android:weightSum="10"
+                                android:weightSum="2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <View
                                     android:background="@color/colorPrimary"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="40dp">
-                                    <TextView
-                                        android:gravity="center_vertical"
-                                        android:paddingLeft="15dp"
-                                        android:textSize="20sp"
-                                        android:background="@color/colorPrimary"
-                                        android:textColor="@color/toolBar_text"
-                                        android:text="Activity 1"
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="9"
-                                        />
-                                    <ImageButton
-                                        android:layout_weight="1"
-                                        android:background="@color/colorPrimary"
-                                        android:src="@drawable/ic_trip_menu"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/btnActivityMenuAction"
-                                        />
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:layout_marginHorizontal="10dp"
-                                    android:orientation="vertical"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
-                                    <LinearLayout
-                                        style="@style/ic_edit_text"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content">
-
-                                        <ImageView
-                                            android:src="@drawable/ic_visit_place"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="match_parent" />
-                                        <TextView
-                                            style="@style/review_trip_text"
-                                            android:text="Bình ba Island, Khanh Hoa"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content" />
-                                    </LinearLayout>
-                                    <LinearLayout
-                                        android:weightSum="2"
-                                        style="@style/ic_edit_text"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content">
-                                        <LinearLayout
-                                            android:paddingRight="10dp"
-                                            android:layout_weight="1"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content">
-
-                                            <ImageView
-                                                android:src="@drawable/ic_start_time"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="match_parent" />
-                                            <TextView
-                                                style="@style/review_trip_text"
-                                                android:text="8:30 AM"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content" />
-                                        </LinearLayout>
-                                        <LinearLayout
-                                            android:layout_weight="1"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content">
-
-                                            <ImageView
-                                                android:src="@drawable/ic_spent_time"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="match_parent" />
-                                            <TextView
-                                                style="@style/review_trip_text"
-                                                android:text="360 m"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content" />
-                                        </LinearLayout>
-
-                                    </LinearLayout>
-                                    <View
-                                        android:layout_marginVertical="5dp"
-                                        android:background="#c6c6c6"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="3dp"/>
-                                    <LinearLayout
-                                        style="@style/ic_edit_text"
-                                        android:weightSum="10"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content">
-                                        <ImageView
-                                            android:layout_weight="1"
-                                            android:src="@drawable/ic_remind"
-                                            android:layout_width="0dp"
-                                            android:layout_height="match_parent" />
-                                        <TextView
-                                            android:textSize="17sp"
-                                            android:layout_weight="7"
-                                            android:text="Remind me this activity"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content" />
-                                        <Switch
-                                            android:layout_weight="2"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content" />
-                                    </LinearLayout>
-
-                                </LinearLayout>
+                                    android:layout_weight="1"
+                                    android:layout_width="5dp"
+                                    android:layout_height="0dp"/>
+                                <View
+                                    android:layout_weight="1"
+                                    android:background="@color/colorPrimary"
+                                    android:layout_width="5dp"
+                                    android:layout_height="0dp"/>
                             </LinearLayout>
-
-                        </android.support.v7.widget.CardView>
+                            <ImageView
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/icon_main"
+                                android:src="@drawable/ic_main_restaurant"
+                                android:padding="6dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp" />
+                        </RelativeLayout>
+                    </FrameLayout>
+                    <LinearLayout
+                        android:weightSum="10"
+                        android:layout_marginVertical="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:background="@drawable/timeline_infor"
+                        android:layout_weight="9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_weight="7"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:textStyle="bold"
+                                android:textColor="@color/toolBar_text"
+                                android:text="1:00 AM  Eating at"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textSize="16sp"
+                                android:textColor="@color/toolBar_text"
+                                android:text="Cay Xoai Restaurant, Binh Ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <ImageButton
+                            android:id="@+id/timeline2"
+                            android:onClick="activityMenu2"
+                            android:src="@drawable/ic_trip_menu"
+                            android:background="@color/colorPrimary"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
 
                     </LinearLayout>
-
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_marginHorizontal="10dp"
+                    android:weightSum="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <FrameLayout
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
-            </android.support.v7.widget.CardView>
+                            <LinearLayout
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical"
+                                android:weightSum="2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <View
+                                    android:background="@color/colorPrimary"
+                                    android:layout_weight="1"
+                                    android:layout_width="5dp"
+                                    android:layout_height="0dp"/>
+                                <View
+                                    android:layout_weight="1"
+                                    android:layout_width="5dp"
+                                    android:layout_height="0dp"/>
+                            </LinearLayout>
+                            <ImageView
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/icon_main"
+                                android:src="@drawable/ic_main_car"
+                                android:padding="5dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp" />
+                        </RelativeLayout>
+                    </FrameLayout>
+                    <LinearLayout
+                        android:weightSum="10"
+                        android:layout_marginVertical="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:background="@drawable/timeline_infor"
+                        android:layout_weight="9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_weight="7"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:textStyle="bold"
+                                android:textColor="@color/toolBar_text"
+                                android:text="4:00 AM  Traveling to"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textSize="16sp"
+                                android:textColor="@color/toolBar_text"
+                                android:text="Phu Dong Park, Nha Trang"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <ImageButton
+                            android:id="@+id/timeline3"
+                            android:onClick="activityMenu3"
+                            android:src="@drawable/ic_trip_menu"
+                            android:background="@color/colorPrimary"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
         <LinearLayout
@@ -403,6 +466,7 @@
                 android:onClick="switchScreen"
                 />
             <Button
+                android:onClick="moveToExplore"
                 android:background="#00ff0000"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/ic_explore_black_24dp"
@@ -442,7 +506,6 @@
 
     <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
     <android.support.design.widget.NavigationView
-
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

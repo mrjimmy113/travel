@@ -28,6 +28,7 @@
             android:layout_height="match_parent">
 
             <ImageButton
+                android:onClick="moveBack"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -127,7 +128,7 @@
                         android:textSize="20sp"
                         android:background="@color/colorPrimary"
                         android:textColor="@color/toolBar_text"
-                        android:text="Activity 1"
+                        android:text="Traveling Activity"
                         android:layout_width="match_parent"
                         android:layout_height="30dp" />
                     <LinearLayout
@@ -207,6 +208,7 @@
             </android.support.v7.widget.CardView>
 
             <Button
+                android:onClick="moveToTypeChoose"
                 android:textColor="@color/toolBar_text"
                 android:text="next activity"
                 android:background="@color/colorPrimary"

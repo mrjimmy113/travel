@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ActivityTypeActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            app:titleTextColor="@color/toolBar_text"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:onClick="moveBack"
+                android:paddingLeft="10dp"
+                android:background="#00ff0000"
+                android:src="@drawable/ic_function_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/toolBar_text"
+                android:text="Activity Type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout
+        android:onClick="moveBack"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:background="@drawable/budget_report_item"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_type_flight"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:text="Flight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/budget_report_item"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_type_tranport"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:text="Transportation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/budget_report_item"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_type_restaurant"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:text="Restaurant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/budget_report_item"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_type_rail"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:text="Railway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/budget_report_item"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_type_activitty"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:text="Event (Concert, Live show,...)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/budget_report_item"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_type_lodging"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:text="Lodging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/budget_report_item"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_type_boat"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:text="Cruise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/budget_report_item"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_type_meeting"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:text="Meeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

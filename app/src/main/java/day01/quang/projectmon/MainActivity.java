@@ -31,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private ImageButton btnDayAction, btnActivityAction;
     private FloatingActionButton fab;
+    private LinearLayout card;
+    private ImageButton tl1,tl2,tl3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnDayAction = findViewById(R.id.btnDayMenuAction);
-        btnActivityAction = findViewById(R.id.btnActivityMenuAction);
         fab = findViewById(R.id.btnTripAction);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -45,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp);
+
+        tl1 = findViewById(R.id.timeline1);
+        tl2 = findViewById(R.id.timeline2);
+        tl3 = findViewById(R.id.timeline3);
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
 
@@ -79,28 +83,18 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-        btnActivityAction.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showActivityMenu();
-            }
-        });
-        btnDayAction.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showDayMenu();
-            }
-        });
         if(getIntent().hasExtra("IsConfirm")) {
             LinearLayout no_data = (LinearLayout) findViewById(R.id.layout_no_data);
             LinearLayout yourTrip = (LinearLayout) findViewById(R.id.layout_yourTrip);
+            LinearLayout todayPlan = (LinearLayout) findViewById(R.id.layout_todayPlan);
             LinearLayout budget= (LinearLayout) findViewById(R.id.layout_budget);
-            CardView card = (CardView) findViewById(R.id.layout_CardView);
+            card = (LinearLayout) findViewById(R.id.layout_CardView);
             no_data.setVisibility(View.GONE);
             yourTrip.setVisibility(View.VISIBLE);
             card.setVisibility(View.VISIBLE);
             budget.setVisibility(View.VISIBLE);
             fab.setVisibility(View.VISIBLE);
+            todayPlan.setVisibility(View.VISIBLE);
         }
 
         fab.setOnTouchListener(new View.OnTouchListener() {
@@ -203,11 +197,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressLint("RestrictedApi")
-    public void showActivityMenu() {
+    public void showActivityMenu(View v) {
         @SuppressLint("RestrictedApi") MenuBuilder menuBuilder =new MenuBuilder(this);
         MenuInflater inflater = new MenuInflater(this);
         inflater.inflate(R.menu.trip_activity_action, menuBuilder);
-        @SuppressLint("RestrictedApi") MenuPopupHelper optionsMenu = new MenuPopupHelper(this, menuBuilder, btnActivityAction);
+        @SuppressLint("RestrictedApi") MenuPopupHelper optionsMenu = new MenuPopupHelper(this, menuBuilder, v);
         optionsMenu.setForceShowIcon(true);
         menuBuilder.setCallback(new MenuBuilder.Callback() {
             @Override
@@ -253,6 +247,14 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     }
+                    case R.id.menu_day_direction: {
+                        moveToMap();
+                        break;
+                    }
+                    case R.id.menu_budget_update: {
+                        budgetDialog();
+                        break;
+                    }
                 }
                 return false;
             }
@@ -271,5 +273,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void activityMenu1(View view) {
+        showActivityMenu(tl1);
+    }
 
+    public void activityMenu3(View view) {
+        showActivityMenu(tl3);
+    }
+
+    public void activityMenu2(View view) {
+        showActivityMenu(tl2);
+    }
+
+    public void moveToExplore(View view) {
+        Intent intent = new Intent(this, FavoriteActivity.class);
+        startActivity(intent);
+    }
 }

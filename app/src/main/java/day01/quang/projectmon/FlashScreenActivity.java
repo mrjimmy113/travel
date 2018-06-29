@@ -2,17 +2,12 @@ package day01.quang.projectmon;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 
-public class PlanEditActivity extends AppCompatActivity {
+public class FlashScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_plan_edit);
-    }
-
-    public void moveBack(View view) {
-        this.finish();
+        setContentView(R.layout.activity_flash_screen);
     }
 }
