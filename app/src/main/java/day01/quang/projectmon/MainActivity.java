@@ -255,6 +255,11 @@ public class MainActivity extends AppCompatActivity {
                         budgetDialog();
                         break;
                     }
+                    case R.id.menu_day_finish_trip:{
+                        Intent intent = new Intent(getApplicationContext(), ReportActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
                 }
                 return false;
             }
