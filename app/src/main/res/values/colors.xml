@@ -6,4 +6,9 @@
     <color name="toolBar_text">#ffffff</color>
     <color name="ic_new_trip">#089702</color>
     <color name="foreground_material_light">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="choosen_expense">#d0d0d0</color>
+    <color name="red">#ff00</color>
+    <color name="yellow">#dac800</color>
+    <color name="brown">#b37227</color>
 </resources>

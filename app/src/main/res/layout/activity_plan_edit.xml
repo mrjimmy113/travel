@@ -7,49 +7,49 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="day01.quang.projectmon.PlanEditActivity">
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:titleTextColor="@color/toolBar_text" />
+            android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:weightSum="10"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageButton
-                android:onClick="moveBack"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#00ff0000"
-                android:src="@drawable/ic_function_back" />
-
-            <TextView
-                android:layout_weight="7"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:gravity="center_vertical"
-                android:text="Edit Trip Plan"
-                android:textColor="@color/toolBar_text"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-            <ImageButton
-                android:layout_weight="2"
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
                 android:background="@color/colorPrimary"
-                android:src="@drawable/ic_save"
-                android:layout_width="0dp"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-    </FrameLayout>
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:titleTextColor="@color/toolBar_text" />
+
+            <LinearLayout
+                android:weightSum="10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:onClick="moveBack"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#00ff0000"
+                    android:src="@drawable/ic_function_back" />
+
+                <TextView
+                    android:layout_weight="7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Edit Trip Plan"
+                    android:textColor="@color/toolBar_text"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <ImageButton
+                    android:layout_weight="2"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/ic_save"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </FrameLayout>
     <EditText
         android:text="Trip to Nha Trang"
         android:layout_marginHorizontal="20dp"

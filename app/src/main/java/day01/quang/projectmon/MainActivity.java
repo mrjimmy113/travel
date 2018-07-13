@@ -5,7 +5,12 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -27,18 +32,21 @@ import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private ImageButton btnDayAction, btnActivityAction;
-    private FloatingActionButton fab;
-    private LinearLayout card;
     private ImageButton tl1,tl2,tl3;
+
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        fab = findViewById(R.id.btnTripAction);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -46,9 +54,13 @@ public class MainActivity extends AppCompatActivity {
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp);
 
-        tl1 = findViewById(R.id.timeline1);
-        tl2 = findViewById(R.id.timeline2);
-        tl3 = findViewById(R.id.timeline3);
+
+
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        setupViewPager(viewPager);
+
+        tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(viewPager);
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
 
@@ -84,54 +96,10 @@ public class MainActivity extends AppCompatActivity {
                 });
 
         if(getIntent().hasExtra("IsConfirm")) {
-            LinearLayout no_data = (LinearLayout) findViewById(R.id.layout_no_data);
-            LinearLayout yourTrip = (LinearLayout) findViewById(R.id.layout_yourTrip);
-            LinearLayout todayPlan = (LinearLayout) findViewById(R.id.layout_todayPlan);
-            LinearLayout budget= (LinearLayout) findViewById(R.id.layout_budget);
-            card = (LinearLayout) findViewById(R.id.layout_CardView);
-            no_data.setVisibility(View.GONE);
-            yourTrip.setVisibility(View.VISIBLE);
-            card.setVisibility(View.VISIBLE);
-            budget.setVisibility(View.VISIBLE);
-            fab.setVisibility(View.VISIBLE);
-            todayPlan.setVisibility(View.VISIBLE);
+
         }
 
-        fab.setOnTouchListener(new View.OnTouchListener() {
-            float startX;
-            float startRawX;
-            float distanceX;
-            int lastAction;
-            @Override
-            public boolean onTouch(View view, MotionEvent event) {
-                switch (event.getActionMasked()) {
-                    case MotionEvent.ACTION_DOWN:
-                        startX = view.getX() - event.getRawX();
-                        startRawX = event.getRawX();
-                        lastAction = MotionEvent.ACTION_DOWN;
-                        break;
 
-                    case MotionEvent.ACTION_MOVE:
-                        view.setX(event.getRawX() + startX);
-                        view.setY(event.getRawY() + startX);
-
-                        lastAction = MotionEvent.ACTION_MOVE;
-                        break;
-
-                    case MotionEvent.ACTION_UP:
-                        distanceX = event.getRawX()-startRawX;
-                        if (Math.abs(distanceX)< 10){
-                            showTripTool();
-                        }
-                        break;
-                    case MotionEvent.ACTION_BUTTON_PRESS:
-
-                    default:
-                        return false;
-                }
-                return true;
-            }
-        });
     }
 
     @Override
@@ -222,11 +190,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressLint("RestrictedApi")
-    public void showTripTool() {
+    public void showTripTool(View view) {
         @SuppressLint("RestrictedApi") MenuBuilder menuBuilder =new MenuBuilder(this);
         MenuInflater inflater = new MenuInflater(this);
         inflater.inflate(R.menu.trip_tool, menuBuilder);
-        @SuppressLint("RestrictedApi") MenuPopupHelper optionsMenu = new MenuPopupHelper(this, menuBuilder, fab);
+        @SuppressLint("RestrictedApi") MenuPopupHelper optionsMenu = new MenuPopupHelper(this, menuBuilder, view);
         optionsMenu.setForceShowIcon(true);
         menuBuilder.setCallback(new MenuBuilder.Callback() {
             @Override
@@ -256,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.menu_day_finish_trip:{
-                        Intent intent = new Intent(getApplicationContext(), ReportActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), SummaryActivity.class);
                         startActivity(intent);
                         break;
                     }
@@ -293,5 +261,41 @@ public class MainActivity extends AppCompatActivity {
     public void moveToExplore(View view) {
         Intent intent = new Intent(this, FavoriteActivity.class);
         startActivity(intent);
+    }
+
+    private void setupViewPager(ViewPager viewPager) {
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new TodayPlanFragment(), "PLAN");
+        adapter.addFragment(new TodayBudgeFragment(), "EXPENSE");
+        viewPager.setAdapter(adapter);
+    }
+
+    class ViewPagerAdapter extends FragmentPagerAdapter {
+        private final List<Fragment> mFragmentList = new ArrayList<>();
+        private final List<String> mFragmentTitleList = new ArrayList<>();
+
+        public ViewPagerAdapter(FragmentManager manager) {
+            super(manager);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return mFragmentList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return mFragmentList.size();
+        }
+
+        public void addFragment(Fragment fragment, String title) {
+            mFragmentList.add(fragment);
+            mFragmentTitleList.add(title);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return mFragmentTitleList.get(position);
+        }
     }
 }
