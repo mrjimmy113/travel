@@ -11,21 +11,6 @@
         android:title="Edit Trip"
         />
     <item
-        android:id="@+id/menu_day_partner"
-        android:icon="@drawable/ic_menu_partner"
-        android:title="Travel Partner"
-        />
-    <item
-        android:id="@+id/menu_budget_update"
-        android:icon="@drawable/ic_budget_update"
-        android:title="Budget Update"
-        />
-    <item
-        android:id="@+id/menu_budget_report"
-        android:icon="@drawable/ic_budget_report"
-        android:title="Budget Report"
-        />
-    <item
         android:id="@+id/menu_day_finish_trip"
         android:icon="@drawable/ic_menu_finish"
         android:title="Finish Trip"
