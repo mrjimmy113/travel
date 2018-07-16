@@ -1,5 +1,6 @@
 package day01.quang.projectmon;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -43,9 +44,8 @@ public class SummaryDayActivity extends AppCompatActivity {
         List<PieEntry> entries = new ArrayList<PieEntry>();
 
 
-        entries.add(new PieEntry(1000000, getResources().getDrawable(R.drawable.ic_main_restaurant)));
-        entries.add(new PieEntry(200000, getResources().getDrawable(R.drawable.ic_main_car)));
-        entries.add(new PieEntry(1000000, getResources().getDrawable(R.drawable.ic_main_shopping)));
+        entries.add(new PieEntry(600000, "Day 1"));
+        entries.add(new PieEntry(600000, "Day 2"));
 //        entries.add(new PieEntry(40, "Restaurant"));
 //        entries.add(new PieEntry(20, "Transportation"));
 //        entries.add(new PieEntry(40, "Shopping"));
@@ -60,8 +60,8 @@ public class SummaryDayActivity extends AppCompatActivity {
         dataSet.setColors(listColor);
         dataSet.setValueFormatter(new LargeValueFormatter());
         dataSet.setValueTextSize(14);
+
         dataSet.setValueTextColor(getResources().getColor(R.color.colorPrimary));
-        dataSet.setXValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
         dataSet.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
         dataSet.setValueLinePart2Length(0.8f);
         PieData lineData = new PieData(dataSet);
@@ -75,16 +75,22 @@ public class SummaryDayActivity extends AppCompatActivity {
         chart.invalidate(); // refres
     }
 
-    public void moveBack(View view) {
-        this.finish();
+    public void moveAcc(View view) {
+        Intent intent = new Intent(this, SummaryActivity.class);
+        startActivity(intent);
     }
 
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new tabItemTransFragment(), "Day 01");
-        adapter.addFragment(new tabItemResFragment(), "Day 02");
+        adapter.addFragment(new tabItemDaySummaryFragment(), "Summary");
+        adapter.addFragment(new tabItemDay01Fragment(), "Day 01");
+        adapter.addFragment(new tabItemDay02Fragment(), "Day 02");
         viewPager.setAdapter(adapter);
+    }
+
+    public void moveBack(View view) {
+        this.finish();
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {

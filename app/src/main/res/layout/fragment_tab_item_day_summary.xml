@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".tabItemDaySummaryFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total days: 2" />
+    <TextView
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total activities: 4" />
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total expense: 1.200.000 đ" />
+
+</LinearLayout>

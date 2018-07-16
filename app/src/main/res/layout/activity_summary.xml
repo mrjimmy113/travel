@@ -57,12 +57,27 @@
         android:weightSum="5"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <com.github.mikephil.charting.charts.PieChart
+        <RelativeLayout
             android:layout_marginVertical="10dp"
             android:layout_weight="2"
-            android:id="@+id/chart"
             android:layout_width="match_parent"
-            android:layout_height="0dp" />
+            android:layout_height="0dp">
+            <com.github.mikephil.charting.charts.PieChart
+                android:layout_marginVertical="10dp"
+
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:onClick="moveDay"
+
+                android:background="@color/colorPrimary"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back_black_24dp" />
+        </RelativeLayout>
         <LinearLayout
             android:orientation="vertical"
             android:layout_weight="3"

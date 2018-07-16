@@ -2,13 +2,19 @@ package day01.quang.projectmon;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TimePicker;
 
 import java.util.Calendar;
@@ -27,7 +33,7 @@ public class PlanActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openTimePicker(View view) {
+    public void openTimePicker(final View view) {
 
         final Calendar c = Calendar.getInstance();
         int hour = c.get(Calendar.HOUR_OF_DAY);
@@ -36,8 +42,8 @@ public class PlanActivity extends AppCompatActivity {
 
             TimePickerDialog timePickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
                 @Override
-                public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-
+                public void onTimeSet(TimePicker v, int hourOfDay, int minute) {
+                    ((EditText)view).setText(hourOfDay + ":" + minute);
                 }
 
             }, hour, minute, false);
@@ -56,8 +62,18 @@ public class PlanActivity extends AppCompatActivity {
     }
 
     public void openPlacePicker(View view) {
+
         Intent intent = new Intent(this, PlaceAroundActivity.class);
         startActivity(intent);
+        if(view.getTag().toString().equals("whereToGo")) {
+            ((EditText)view).setText("Nha Trang");
+        }
+        if(view.getTag().toString().equals("whereHotel")) {
+            ((EditText)view).setText("Vinpearl Hotel");
+        }
+        if(view.getTag().toString().equals("whereVisit")) {
+            ((EditText)view).setText("Binh ba Island");
+        }
     }
 
     public void moveBack(View view) {
@@ -65,7 +81,36 @@ public class PlanActivity extends AppCompatActivity {
     }
 
     public void moveToTypeChoose(View view) {
+        CardView cd = findViewById(R.id.activity_2);
+        cd.setVisibility(View.VISIBLE);
         Intent intent = new Intent(this, ActivityTypeActivity.class);
         startActivity(intent);
+    }
+
+    public void newDay(View view) {
+        CardView cd = findViewById(R.id.day_2);
+        cd.setVisibility(View.VISIBLE);
+    }
+
+    public void deleteActivity(final View view) {
+        final Dialog dialog =  new Dialog(this);
+        dialog.setContentView(R.layout.dialog_confirm);
+        Button btnConfirm = dialog.findViewById(R.id.btnConfirm);
+        Button btnCancel = dialog.findViewById(R.id.btnCancel);
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        btnConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((CardView)(((view.getParent()).getParent())).getParent()).setVisibility(View.GONE);
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+
     }
 }

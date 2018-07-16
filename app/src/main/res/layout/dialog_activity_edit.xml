@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:textColor="@color/toolBar_text"
+        android:background="@color/colorPrimary"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:text="Edit Activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:paddingBottom="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:onClick="moveToTypeChoose"
+                android:paddingLeft="15dp"
+                android:textSize="20sp"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/toolBar_text"
+                android:text="Traveling Activity"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+            <LinearLayout
+                android:layout_marginHorizontal="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/ic_visit_place"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <EditText
+                        android:text="Bình Ba Island, Nha Trang"
+                        android:onClick="openPlacePicker"
+                        android:focusable="false"
+                        android:hint="What place to visit ?"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:paddingRight="10dp"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/ic_start_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                        <EditText
+                            android:text="8:00 AM"
+                            android:focusable="false"
+                            android:inputType="time"
+                            android:id="@+id/edt_Time"
+                            android:onClick="openTimePicker"
+                            android:hint="Departure time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <View
+                    android:layout_marginVertical="5dp"
+                    android:background="#c6c6c6"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"/>
+                <LinearLayout
+                    android:weightSum="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_remind"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:textSize="17sp"
+                        android:layout_weight="7"
+                        android:text="Remind me this activity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                    <Switch
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:paddingRight="10dp"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/ic_spent_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <EditText
+                        android:text="30 minute"
+                        android:inputType="number"
+                        android:hint="Remind me before"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnCancel"
+            android:textColor="@color/toolBar_text"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="cancel"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="60dp" />
+        <Button
+            android:id="@+id/btnConfirm"
+            android:textColor="@color/toolBar_text"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Confirm"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="60dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -18,17 +18,16 @@
             <LinearLayout
                 android:layout_marginVertical="10dp"
                 android:paddingLeft="10dp"
-                android:layout_weight="2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
+                    android:gravity="center"
                     android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
                         android:textColor="@color/toolBar_text"
-                        android:text="TOTAL"
+                        android:text="Today Expense"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -43,7 +42,7 @@
                         android:progress="23"
                         android:progressBackgroundTint="@color/toolBar_text"
                         android:progressTint="@color/colorPrimary"
-                        android:layout_marginRight="30dp"
+                        android:layout_marginHorizontal="60dp"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -51,44 +50,11 @@
                     <TextView
                         android:textColor="@color/toolBar_text"
                         android:textSize="12dp"
-                        android:text="LEFT: đ 7.700.000"
+                        android:text="Budget left: đ 7.700.000"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:textColor="@color/toolBar_text"
-                        android:text="DAILY"
-                        android:textStyle="bold"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <TextView
-                        android:textColor="@color/toolBar_text"
-                        android:textSize="22dp"
-                        android:text="đ 2.300.000"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <ProgressBar
-                        android:progressBackgroundTint="@color/toolBar_text"
-                        android:max="100"
-                        android:progress="95"
-                        android:progressTint="@color/colorPrimary"
-                        android:layout_marginRight="30dp"
-                        style="?android:attr/progressBarStyleHorizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        />
-                    <TextView
-                        android:textColor="@color/toolBar_text"
-                        android:textSize="12dp"
-                        android:text="LEFT: đ 200.000"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
+
 
             </LinearLayout>
             <LinearLayout

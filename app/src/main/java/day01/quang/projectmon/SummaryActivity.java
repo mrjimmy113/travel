@@ -1,6 +1,7 @@
 package day01.quang.projectmon;
 
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -47,9 +48,11 @@ public class SummaryActivity extends AppCompatActivity {
         List<PieEntry> entries = new ArrayList<PieEntry>();
 
 
+
         entries.add(new PieEntry(1000000, getResources().getDrawable(R.drawable.ic_main_restaurant)));
         entries.add(new PieEntry(200000, getResources().getDrawable(R.drawable.ic_main_car)));
         entries.add(new PieEntry(1000000, getResources().getDrawable(R.drawable.ic_main_shopping)));
+
 //        entries.add(new PieEntry(40, "Restaurant"));
 //        entries.add(new PieEntry(20, "Transportation"));
 //        entries.add(new PieEntry(40, "Shopping"));
@@ -81,6 +84,7 @@ public class SummaryActivity extends AppCompatActivity {
 
     public void moveBack(View view) {
         this.finish();
+
     }
 
 
@@ -90,6 +94,10 @@ public class SummaryActivity extends AppCompatActivity {
         adapter.addFragment(new tabItemResFragment(), "");
         adapter.addFragment(new tabItemShopFragment(), "");
         viewPager.setAdapter(adapter);
+    }
+
+    public void moveDay(View view) {
+        this.finish();
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
