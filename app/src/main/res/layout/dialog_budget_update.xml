@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <TextView
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:textSize="20sp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/toolBar_text"
+        android:text="Budget Update"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        />
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:checked="true"
+            android:text="Spent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <RadioButton
+
+            android:layout_weight="1"
+            android:text="Invest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginHorizontal="30dp"
+        style="@style/ic_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_budget"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <EditText
+            android:inputType="number"
+            android:hint="Amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginHorizontal="30dp"
+        style="@style/ic_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_message"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <EditText
+            android:inputType="textImeMultiLine"
+            android:hint="Message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:weightSum="2"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_weight="1"
+            android:textColor="@color/toolBar_text"
+            android:background="@drawable/btn_round"
+            android:text="Cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_weight="1"
+            android:textColor="@color/toolBar_text"
+            android:background="@drawable/btn_round"
+            android:text="Confirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

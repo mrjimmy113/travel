@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -45,5 +46,9 @@ public class PlaceAroundActivity extends AppCompatActivity implements OnMapReady
                 .zoom(15).build();
         //Zoom in and animate the camera.
         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+    }
+
+    public void moveBack(View view) {
+        this.finish();
     }
 }

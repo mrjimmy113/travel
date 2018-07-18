@@ -28,6 +28,7 @@
             android:layout_height="match_parent">
 
             <ImageButton
+                android:onClick="moveBack"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -53,83 +54,53 @@
                 android:layout_height="match_parent" />
         </LinearLayout>
     </FrameLayout>
-    <EditText
-        android:layout_marginHorizontal="20dp"
-        android:hint="Name your trip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        app:cardCornerRadius="10dp"
-        card_view:cardPreventCornerOverlap="false"
-        android:layout_margin="10dp"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <TextView
-                android:paddingLeft="15dp"
-                android:textSize="20sp"
-                android:background="@color/colorPrimary"
-                android:textColor="@color/toolBar_text"
-                android:text="Day 1"
+            <EditText
+                android:layout_marginHorizontal="20dp"
+                android:hint="Name your trip"
                 android:layout_width="match_parent"
-                android:layout_height="30dp" />
-            <LinearLayout
-                android:layout_marginHorizontal="10dp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:src="@drawable/ic_destination"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent" />
-                    <EditText
-                        android:hint="Where you want to go ?"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:src="@drawable/ic_hotel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent" />
-                    <EditText
-                        android:hint="Where to stay overnight ?"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-            </LinearLayout>
+                android:layout_height="wrap_content" />
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 app:cardCornerRadius="10dp"
-                android:layout_marginVertical="20dp"
-                android:layout_marginHorizontal="15dp"
+                card_view:cardPreventCornerOverlap="false"
+                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <LinearLayout
-                    android:paddingBottom="10dp"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <TextView
-                        android:paddingLeft="15dp"
-                        android:textSize="20sp"
+                    <RelativeLayout
+
                         android:background="@color/colorPrimary"
-                        android:textColor="@color/toolBar_text"
-                        android:text="Activity 1"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp" />
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textAlignment="center"
+                            android:paddingLeft="15dp"
+                            android:textSize="20sp"
+                            android:background="@color/colorPrimary"
+                            android:textColor="@color/toolBar_text"
+                            android:text="Day 1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageButton
+                            android:padding="5dp"
+                            android:onClick="deleteActivity"
+                            android:layout_alignParentEnd="true"
+                            android:background="@color/colorPrimary"
+                            android:src="@drawable/ic_delete_forever_black_24dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
                     <LinearLayout
                         android:layout_marginHorizontal="10dp"
                         android:orientation="vertical"
@@ -140,95 +111,550 @@
                             android:layout_height="wrap_content">
 
                             <ImageView
-                                android:src="@drawable/ic_visit_place"
+                                android:src="@drawable/ic_destination"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent" />
                             <EditText
-                                android:hint="What place to visit ?"
+                                android:tag="whereToGo"
+                                android:focusable="false"
+                                android:onClick="openPlacePicker"
+                                android:hint="Where you want to go ?"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content" />
                         </LinearLayout>
                         <LinearLayout
-                            android:weightSum="2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
-                            <LinearLayout
-                                android:paddingRight="10dp"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content">
 
-                                <ImageView
-                                    android:src="@drawable/ic_start_time"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent" />
-                                <EditText
-                                    android:hint="Arrive Time"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content">
-
-                                <ImageView
-                                    android:src="@drawable/ic_spent_time"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent" />
-                                <EditText
-                                    android:hint="Spent time"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
-                            </LinearLayout>
-
-                        </LinearLayout>
-                        <View
-                            android:layout_marginVertical="5dp"
-                            android:background="#c6c6c6"
-                            android:layout_width="match_parent"
-                            android:layout_height="3dp"/>
-                        <LinearLayout
-                            android:weightSum="10"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
                             <ImageView
-                                android:layout_weight="1"
-                                android:src="@drawable/ic_remind"
-                                android:layout_width="0dp"
+                                android:src="@drawable/ic_hotel"
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent" />
-                            <TextView
-                                android:textSize="17sp"
-                                android:layout_weight="7"
-                                android:text="Remind me this activity"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content" />
-                            <Switch
-                                android:layout_weight="2"
-                                android:layout_width="0dp"
+                            <EditText
+                                android:tag="whereHotel"
+                                android:focusable="false"
+                                android:onClick="openPlacePicker"
+                                android:hint="Where to stay overnight ?"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content" />
                         </LinearLayout>
                     </LinearLayout>
+                    <android.support.v7.widget.CardView
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginVertical="20dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:paddingBottom="10dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RelativeLayout
 
+                                android:background="@color/colorPrimary"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:textAlignment="center"
+                                    android:paddingLeft="15dp"
+                                    android:textSize="20sp"
+                                    android:background="@color/colorPrimary"
+                                    android:textColor="@color/toolBar_text"
+                                    android:text="Traveling Activity"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <ImageButton
+                                    android:padding="5dp"
+                                    android:onClick="deleteActivity"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@color/colorPrimary"
+                                    android:src="@drawable/ic_delete_forever_black_24dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent" />
+                            </RelativeLayout>
+                            <LinearLayout
+                                android:layout_marginHorizontal="10dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:src="@drawable/ic_visit_place"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent" />
+                                    <EditText
+                                        android:tag="whereVisit"
+                                        android:onClick="openPlacePicker"
+                                        android:focusable="false"
+                                        android:hint="What place to visit ?"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:weightSum="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:paddingRight="10dp"
+                                        android:layout_weight="2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:src="@drawable/ic_start_time"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent" />
+                                        <EditText
+                                            android:focusable="false"
+                                            android:inputType="time"
+                                            android:id="@+id/edt_Time_2_2"
+                                            android:onClick="openTimePicker"
+                                            android:hint="Departure time"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                                <View
+                                    android:layout_marginVertical="5dp"
+                                    android:background="#c6c6c6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3dp"/>
+                                <LinearLayout
+                                    android:weightSum="10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:layout_weight="1"
+                                        android:src="@drawable/ic_remind"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent" />
+                                    <TextView
+                                        android:textSize="17sp"
+                                        android:layout_weight="7"
+                                        android:text="Remind me this activity"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content" />
+                                    <Switch
+                                        android:layout_weight="2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:paddingLeft="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:paddingRight="10dp"
+                                    android:layout_weight="2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:src="@drawable/ic_spent_time"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent" />
+                                    <EditText
+                                        android:focusable="false"
+                                        android:inputType="time"
+                                        android:onClick="openTimePicker"
+                                        android:hint="Remind me before"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                    <android.support.v7.widget.CardView
+                        android:visibility="gone"
+                        android:id="@+id/activity_2"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginVertical="20dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:paddingBottom="10dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RelativeLayout
+
+                                android:background="@color/colorPrimary"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:textAlignment="center"
+                                    android:paddingLeft="15dp"
+                                    android:textSize="20sp"
+                                    android:background="@color/colorPrimary"
+                                    android:textColor="@color/toolBar_text"
+                                    android:text="Flight Activity"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <ImageButton
+                                    android:padding="5dp"
+                                    android:onClick="deleteActivity"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@color/colorPrimary"
+                                    android:src="@drawable/ic_delete_forever_black_24dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent" />
+                            </RelativeLayout>
+                            <LinearLayout
+                                android:layout_marginHorizontal="10dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:src="@drawable/ic_visit_place"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent" />
+                                    <EditText
+                                        android:tag="whereVisit"
+                                        android:onClick="openPlacePicker"
+                                        android:focusable="false"
+                                        android:hint="What place to visit ?"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:weightSum="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:paddingRight="10dp"
+                                        android:layout_weight="2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:src="@drawable/ic_start_time"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent" />
+                                        <EditText
+                                            android:focusable="false"
+                                            android:inputType="time"
+                                            android:id="@+id/edt_Time_2_3"
+                                            android:onClick="openTimePicker"
+                                            android:hint="Departure time"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                                <View
+                                    android:layout_marginVertical="5dp"
+                                    android:background="#c6c6c6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3dp"/>
+                                <LinearLayout
+                                    android:weightSum="10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:layout_weight="1"
+                                        android:src="@drawable/ic_remind"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent" />
+                                    <TextView
+                                        android:textSize="17sp"
+                                        android:layout_weight="7"
+                                        android:text="Remind me this activity"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content" />
+                                    <Switch
+                                        android:layout_weight="2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:paddingLeft="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:paddingRight="10dp"
+                                    android:layout_weight="2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:src="@drawable/ic_spent_time"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent" />
+                                    <EditText
+                                        android:focusable="false"
+                                        android:inputType="time"
+                                        android:onClick="openTimePicker"
+                                        android:hint="Remind me before"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <Button
+                        android:onClick="moveToTypeChoose"
+                        android:textColor="@color/toolBar_text"
+                        android:text="next activity"
+                        android:background="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:visibility="gone"
+                android:id="@+id/day_2"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                app:cardCornerRadius="10dp"
+                card_view:cardPreventCornerOverlap="false"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+
+                        android:background="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textAlignment="center"
+                            android:paddingLeft="15dp"
+                            android:textSize="20sp"
+                            android:background="@color/colorPrimary"
+                            android:textColor="@color/toolBar_text"
+                            android:text="Day 2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageButton
+                            android:padding="5dp"
+                            android:onClick="deleteActivity"
+                            android:layout_alignParentEnd="true"
+                            android:background="@color/colorPrimary"
+                            android:src="@drawable/ic_delete_forever_black_24dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:src="@drawable/ic_destination"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                            <EditText
+                                android:tag="whereToGo"
+                                android:focusable="false"
+                                android:onClick="openPlacePicker"
+                                android:hint="Where you want to go ?"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:src="@drawable/ic_hotel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                            <EditText
+                                android:tag="whereHotel"
+                                android:focusable="false"
+                                android:onClick="openPlacePicker"
+                                android:hint="Where to stay overnight ?"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <android.support.v7.widget.CardView
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginVertical="20dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:paddingBottom="10dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RelativeLayout
+
+                                android:background="@color/colorPrimary"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:textAlignment="center"
+                                    android:paddingLeft="15dp"
+                                    android:textSize="20sp"
+                                    android:background="@color/colorPrimary"
+                                    android:textColor="@color/toolBar_text"
+                                    android:text="Traveling Activity"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <ImageButton
+                                    android:padding="5dp"
+                                    android:onClick="deleteActivity"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@color/colorPrimary"
+                                    android:src="@drawable/ic_delete_forever_black_24dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent" />
+                            </RelativeLayout>
+                            <LinearLayout
+                                android:layout_marginHorizontal="10dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:src="@drawable/ic_visit_place"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent" />
+                                    <EditText
+                                        android:tag="whereVisit"
+                                        android:onClick="openPlacePicker"
+                                        android:focusable="false"
+                                        android:hint="What place to visit ?"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:weightSum="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:paddingRight="10dp"
+                                        android:layout_weight="2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:src="@drawable/ic_start_time"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent" />
+                                        <EditText
+                                            android:focusable="false"
+                                            android:inputType="time"
+                                            android:id="@+id/edt_Time"
+                                            android:onClick="openTimePicker"
+                                            android:hint="Departure time"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                                <View
+                                    android:layout_marginVertical="5dp"
+                                    android:background="#c6c6c6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3dp"/>
+                                <LinearLayout
+                                    android:weightSum="10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:layout_weight="1"
+                                        android:src="@drawable/ic_remind"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent" />
+                                    <TextView
+                                        android:textSize="17sp"
+                                        android:layout_weight="7"
+                                        android:text="Remind me this activity"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content" />
+                                    <Switch
+                                        android:layout_weight="2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:paddingLeft="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:paddingRight="10dp"
+                                    android:layout_weight="2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:src="@drawable/ic_spent_time"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent" />
+                                    <EditText
+                                        android:focusable="false"
+                                        android:inputType="time"
+                                        android:onClick="openTimePicker"
+                                        android:hint="Remind me before"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                    <Button
+                        android:onClick="moveToTypeChoose"
+                        android:textColor="@color/toolBar_text"
+                        android:text="next activity"
+                        android:background="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
             </android.support.v7.widget.CardView>
 
             <Button
+                android:onClick="newDay"
                 android:textColor="@color/toolBar_text"
-                android:text="next activity"
-                android:background="@color/colorPrimary"
-                android:layout_width="match_parent"
+                android:background="@drawable/btn_round"
+                android:text="Next Day"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
+    </ScrollView>
 
-    </android.support.v7.widget.CardView>
-
-    <Button
-        android:textColor="@color/toolBar_text"
-        android:background="@drawable/btn_round"
-        android:text="Next Day"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
 </LinearLayout>

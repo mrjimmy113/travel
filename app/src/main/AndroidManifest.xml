@@ -24,58 +24,118 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FavoriteActivity" />
-        <activity android:name=".SettingActivity" />
-        <activity android:name=".Detail1Activity" />
-        <activity android:name=".DetailDLActivity" />
-        <activity android:name=".DetailHotel1Activity" />
-        <activity android:name=".DetailHotel2Activity" />
-        <activity android:name=".DetailFood1Activity" />
-        <activity android:name=".DetailFood2Activity"></activity>
-
+        <activity
+            android:name=".FavoriteActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SettingActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Detail1Activity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DetailDLActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DetailHotel1Activity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DetailHotel2Activity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DetailFood1Activity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DetailFood2Activity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".PlanActivity"
-            android:theme="@style/AppTheme"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
-            />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".TripBankActivity"
-            android:theme="@style/AppTheme"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
-            />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".MapActivity"
-            android:theme="@style/AppTheme"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
-            />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".UserInfoActivity"
-            android:theme="@style/AppTheme"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
-            />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".PlanEditActivity"
-            android:theme="@style/AppTheme"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
-            />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".PlaceAroundActivity"
-            android:theme="@style/AppTheme"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
-            />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ConfirmTripActivity"
-            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PartnerActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReportActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
-            />
-
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".FlashScreenActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ActivityTypeActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DetailBudgetActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".NewExpenseActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SummaryActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".SummaryDayActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

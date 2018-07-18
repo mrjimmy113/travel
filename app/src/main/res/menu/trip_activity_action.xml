@@ -7,6 +7,12 @@
         android:title="Direction"
         />
     <item
+        android:id="@+id/menu_activity_edit"
+        android:title="Edit Activity"
+        android:icon="@drawable/ic_trip_edit"
+        />
+    <item
+        android:id="@+id/menu_activity_cancel"
         android:icon="@drawable/ic_trip_cancel"
         android:title="Cancel Activity"
         />

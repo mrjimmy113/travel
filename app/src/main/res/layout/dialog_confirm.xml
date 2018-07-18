@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:textColor="@color/toolBar_text"
+        android:background="@color/colorPrimary"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:text="Confirm Action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+
+        android:layout_marginVertical="30dp"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:text="Do you really want to do this ?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnCancel"
+            android:textColor="@color/toolBar_text"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="cancel"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="60dp" />
+        <Button
+            android:id="@+id/btnConfirm"
+            android:textColor="@color/toolBar_text"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Confirm"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="60dp" />
+    </LinearLayout>
+</LinearLayout>

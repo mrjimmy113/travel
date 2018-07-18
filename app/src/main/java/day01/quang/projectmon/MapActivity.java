@@ -3,6 +3,7 @@ package day01.quang.projectmon;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -29,5 +30,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         LatLng sydney = new LatLng(-34,151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    }
+
+    public void moveBack(View view) {
+        this.finish();
     }
 }

@@ -17,4 +17,13 @@ public class TripBankActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ConfirmTripActivity.class);
         startActivity(intent);
     }
+
+    public void moveBack(View view) {
+        this.finish();
+    }
+
+    public void moveToEdit(View view) {
+        Intent intent = new Intent(this, PlanEditActivity.class);
+        startActivity(intent);
+    }
 }

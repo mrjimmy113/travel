@@ -6,4 +6,11 @@
     <string name="home_trip_plan">Trip Plan</string>
     <string name="home_explore">Explore</string>
     <string name="home_trip_bank">Trip Bank</string>
+    <string-array name="currency">
+        <item>đ (Vietnam)</item>
+        <item>$ (USD)</item>
+        <item>YEN (Japan)</item>
+        <item>WON (KOREA)</item>
+        <item>RM (Malaysia)</item>
+    </string-array>
 </resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_day_direction"
+        android:icon="@drawable/ic_direction"
+        android:title="Hotel Direction"
+        />
+    <item
+        android:id="@+id/menu_day_edit_trip"
+        android:icon="@drawable/ic_trip_edit"
+        android:title="Edit Trip"
+        />
+    <item
+        android:id="@+id/menu_day_finish_trip"
+        android:icon="@drawable/ic_menu_finish"
+        android:title="Finish Trip"
+        />
+    <item
+        android:id="@+id/menu_day_cancel_trip"
+        android:icon="@drawable/ic_trip_cancel"
+        android:title="Cancel Trip"
+        />
+</menu>
