@@ -26,4 +26,9 @@ public class TripBankActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PlanEditActivity.class);
         startActivity(intent);
     }
+
+    public void moveSummary(View view) {
+        Intent intent = new Intent(this, SummaryDayActivity.class);
+        startActivity(intent);
+    }
 }

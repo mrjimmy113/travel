@@ -18,6 +18,6 @@
     <item
         android:id="@+id/menu_day_cancel_trip"
         android:icon="@drawable/ic_trip_cancel"
-        android:title="Cancel Trip"
+        android:title="XXXXXXXXX"
         />
 </menu>

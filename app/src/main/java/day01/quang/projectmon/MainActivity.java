@@ -27,12 +27,14 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -268,8 +270,27 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.menu_day_finish_trip:{
-                        Intent intent = new Intent(getApplicationContext(), SummaryDayActivity.class);
-                        startActivity(intent);
+                        final Dialog dialog = new Dialog(MainActivity.this);
+                        dialog.setContentView(R.layout.dialog_activity_edit);
+                        Button btnConfirm = dialog.findViewById(R.id.btnConfirm);
+                        Button btnCancel = dialog.findViewById(R.id.btnCancel);
+                        btnConfirm.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                hide();
+                                Intent intent = new Intent(getApplicationContext(), SummaryDayActivity.class);
+                                startActivity(intent);
+                                dialog.dismiss();
+                            }
+                        });
+                        btnCancel.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                dialog.dismiss();
+                            }
+                        });
+                        dialog.show();
+
                         break;
                     }
                     case R.id.menu_day_cancel_trip: {
@@ -290,6 +311,10 @@ public class MainActivity extends AppCompatActivity {
         Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_budget_update);
+        Spinner sp = dialog.findViewById(R.id.spinner_currency);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.currency, R.layout.spinner_item);
+        sp.setAdapter(adapter);
         dialog.show();
     }
 
@@ -313,14 +338,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new TodayPlanFragment(), "PLAN");
-        adapter.addFragment(new TodayBudgeFragment(), "EXPENSE");
+        adapter.addFragment(new TodayPlanFragment(), "Trip Plan");
+        adapter.addFragment(new TodayBudgeFragment(), "Incurred Expense");
         viewPager.setAdapter(adapter);
     }
 
     public void finishTrip(View view) {
         Intent intent = new Intent(this, SummaryDayActivity.class);
         startActivity(intent);
+        hide();
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
@@ -370,23 +396,23 @@ public class MainActivity extends AppCompatActivity {
         timePickerDialog.show();
         Log.d("MyDebug", "DKM");
 
-//
-//        DatePickerDialog datePickerDialog = new DatePickerDialog(getApplicationContext(), new DatePickerDialog.OnDateSetListener() {
-//            @Override
-//            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-//
-//            }
-//        },c.YEAR,c.MONTH,c.DAY_OF_MONTH);
+
 
     }
 
-    public void openPlacePicker(View view) {
-        Intent intent = new Intent(this, PlaceAroundActivity.class);
-        startActivity(intent);
-    }
+
 
     public void moveToTypeChoose(View view) {
         Intent intent = new Intent(this, ActivityTypeActivity.class);
         startActivity(intent);
+    }
+
+    public void hide() {
+        LinearLayout nodata = findViewById(R.id.layout_no_data);
+        LinearLayout tripTitle = findViewById(R.id.layout_yourTrip);
+        FrameLayout mainFunc = findViewById(R.id.layout_main);
+        nodata.setVisibility(View.GONE);
+        tripTitle.setVisibility(View.VISIBLE);
+        mainFunc.setVisibility(View.VISIBLE);
     }
 }

@@ -13,4 +13,28 @@
         <item>WON (KOREA)</item>
         <item>RM (Malaysia)</item>
     </string-array>
+    <string-array name="location">
+        <item>Nha Trang</item>
+        <item>Ha Long</item>
+        <item>Ho Tram</item>
+        <item>Vung Tau</item>
+        <item>Da Lat</item>
+        <item>Sapa</item>
+    </string-array>
+    <string-array name="hotel">
+        <item>Vinpearl Resort</item>
+        <item>Imperial Hotel</item>
+        <item>Pullman Hotel</item>
+        <item>The Grand</item>
+        <item>Sanctuary</item>
+    </string-array>
+    <string-array name="place">
+        <item>Cay Xoai Restaurant</item>
+        <item>Ganh Hao Restaurant</item>
+        <item>Phuong Trang Restaurant</item>
+        <item>Phu Dong Park</item>
+        <item>Mui Ne Beach</item>
+
+    </string-array>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>

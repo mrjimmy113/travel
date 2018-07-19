@@ -152,7 +152,7 @@
                             android:textSize="18sp"
                             android:backgroundTint="@color/colorPrimary"
                             android:textColor="@color/toolBar_text"
-                            android:text="report"
+                            android:text="See report"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
