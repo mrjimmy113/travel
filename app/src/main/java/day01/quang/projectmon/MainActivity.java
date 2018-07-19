@@ -196,6 +196,10 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.menu_activity_edit :{
                         final Dialog dialog = new Dialog(MainActivity.this);
                         dialog.setContentView(R.layout.dialog_activity_edit);
+                        Spinner sp = dialog.findViewById(R.id.spinner_currency);
+                        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(MainActivity.this,
+                                R.array.currency, R.layout.spinner_item);
+                        sp.setAdapter(adapter);
                         Button btnConfirm = dialog.findViewById(R.id.btnConfirm);
                         Button btnCancel = dialog.findViewById(R.id.btnCancel);
                         btnConfirm.setOnClickListener(new View.OnClickListener() {
@@ -271,7 +275,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     case R.id.menu_day_finish_trip:{
                         final Dialog dialog = new Dialog(MainActivity.this);
-                        dialog.setContentView(R.layout.dialog_activity_edit);
+                        dialog.setContentView(R.layout.dialog_confirm);
                         Button btnConfirm = dialog.findViewById(R.id.btnConfirm);
                         Button btnCancel = dialog.findViewById(R.id.btnCancel);
                         btnConfirm.setOnClickListener(new View.OnClickListener() {
