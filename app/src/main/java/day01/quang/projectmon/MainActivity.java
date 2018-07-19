@@ -338,8 +338,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new TodayPlanFragment(), "Trip Plan");
-        adapter.addFragment(new TodayBudgeFragment(), "Incurred Expense");
+        adapter.addFragment(new TodayPlanFragment(), "");
         viewPager.setAdapter(adapter);
     }
 

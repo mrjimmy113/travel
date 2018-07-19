@@ -241,28 +241,6 @@
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content" />
                                         </LinearLayout>
-                                        <LinearLayout
-                                            android:paddingRight="10dp"
-                                            android:layout_weight="1"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content">
-
-                                            <ImageView
-                                                android:src="@drawable/ic_timelapse_black_24dp"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="match_parent" />
-                                            <EditText
-                                                android:inputType="number"
-                                                android:hint="Duration"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content" />
-                                            <TextView
-                                                android:textSize="15sp"
-                                                android:textAlignment="center"
-                                                android:text="minute"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content" />
-                                        </LinearLayout>
 
 
                                     </LinearLayout>
@@ -438,28 +416,7 @@
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content" />
                                         </LinearLayout>
-                                        <LinearLayout
-                                            android:paddingRight="10dp"
-                                            android:layout_weight="1"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content">
 
-                                            <ImageView
-                                                android:src="@drawable/ic_timelapse_black_24dp"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="match_parent" />
-                                            <EditText
-                                                android:inputType="number"
-                                                android:hint="Duration"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content" />
-                                            <TextView
-                                                android:textSize="15sp"
-                                                android:textAlignment="center"
-                                                android:text="minute"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content" />
-                                        </LinearLayout>
 
 
                                     </LinearLayout>
@@ -727,28 +684,6 @@
                                                 android:onClick="openTimePicker"
                                                 android:hint="Departure time"
                                                 android:layout_width="match_parent"
-                                                android:layout_height="wrap_content" />
-                                        </LinearLayout>
-                                        <LinearLayout
-                                            android:paddingRight="10dp"
-                                            android:layout_weight="1"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content">
-
-                                            <ImageView
-                                                android:src="@drawable/ic_timelapse_black_24dp"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="match_parent" />
-                                            <EditText
-                                                android:inputType="number"
-                                                android:hint="Duration"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content" />
-                                            <TextView
-                                                android:textSize="15sp"
-                                                android:textAlignment="center"
-                                                android:text="minute"
-                                                android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content" />
                                         </LinearLayout>
 
