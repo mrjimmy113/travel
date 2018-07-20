@@ -298,7 +298,8 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.menu_day_cancel_trip: {
-                        layoutFinish.setVisibility(View.VISIBLE);
+                        Intent intent = new Intent(MainActivity.this, SummaryDayActivity.class);
+                        startActivity(intent);
                         break;
                     }
                 }
